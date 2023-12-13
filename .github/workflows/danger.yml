@@ -11,12 +11,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build
-        run: swift build
-
-      - name: Test
-        run: swift test
-
       - name: Run Danger
         run: bundle exec danger
         env:
