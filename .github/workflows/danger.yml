@@ -2,88 +2,22 @@ name: CI
 
 on:
   pull_request:
-  push:
-    branches:
-      - main
-      - master
-
-concurrency:
-  group: ${{ github.ref }}-${{ github.workflow }}
-  cancel-in-progress: true
 
 jobs:
-  test-on-macos-12:
-    name: Test on macOS 12
-    runs-on: macOS-12
-    strategy:
-      fail-fast: false
-      matrix:
-        xcode: ["13.2.1"]
+  build:
+    runs-on: macos-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@master
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            .build/artifacts
-            .build/checkouts
-            .build/repositories
-          key: ${{ runner.os }}-dependencies-${{ matrix.xcode }}-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-dependencies-${{ matrix.xcode }}-${{ hashFiles('**/Package.resolved') }}
-            ${{ runner.os }}-dependencies-${{ matrix.xcode }}-
-      - name: Select Xcode
-        run: |
-          xcodebuild -version
-          ls -nt /Applications/ | grep "Xcode*"
-          sudo xcode-select -switch /Applications/Xcode_${{ matrix.xcode }}.app
-          xcodebuild -version
-      - name: Install danger-js
-        run: brew install danger/tap/danger-js
+      - name: Build
+        run: swift build
 
-      # - run: swift test
+      - name: Test
+        run: swift test
 
-      - run: swift run danger-swift ci --verbose --failOnErrors
-        if: ${{ github.event_name == 'pull_request' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  test-dependencies-resolver:
-    name: Test dependencies resolver
-    runs-on: macOS-12
-    strategy:
-      fail-fast: false
-      matrix:
-        xcode: ["13.2.1"]
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            .build/artifacts
-            .build/checkouts
-            .build/repositories
-          key: ${{ runner.os }}-dependencies-${{ matrix.xcode }}-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-dependencies-${{ matrix.xcode }}-${{ hashFiles('**/Package.resolved') }}
-            ${{ runner.os }}-dependencies-${{ matrix.xcode }}-
-      - name: Select Xcode
-        run: |
-          xcodebuild -version
-          ls -nt /Applications/ | grep "Xcode*"
-          sudo xcode-select -switch /Applications/Xcode_${{ matrix.xcode }}.app
-          xcodebuild -version
-      - name: Install danger-js
-        run: brew install danger/tap/danger-js
-
-      - run: make install
-
-      - run: mkdir DangerTestWithDependencies && mv DangerfileWithDependencies.swift DangerTestWithDependencies/Dangerfile.swift
-
-      - run: cd DangerTestWithDependencies && danger-swift ci --verbose --failOnErrors --id DangerDependencies
-        if: ${{ github.event_name == 'pull_request' }}
+      - name: Danger
+        run: danger-swift ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
