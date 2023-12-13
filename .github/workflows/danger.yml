@@ -35,11 +35,11 @@ jobs:
                       $HOME/Homebrew-Cache
                   key: brew-${{ runner.os }}-${{ hashFiles('**/*.rb') }}
 
-            - name: Install Danger
-              run: |
-                  brew install danger/tap/danger-js
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            # - name: Install Danger Swift
+            #   run: |
+            #       brew install danger/tap/danger-swift
+            #   env:
+            #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Save Homebrew Cache
               uses: actions/cache@v2
