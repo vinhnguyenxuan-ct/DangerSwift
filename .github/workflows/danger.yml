@@ -18,24 +18,24 @@ jobs:
               with:
                   fetch-depth: 0
 
-            - name: Set up Ruby
-              uses: ruby/setup-ruby@v1
-              with:
-                  ruby-version: 3.0.5
+            # - name: Set up Ruby
+            #   uses: ruby/setup-ruby@v1
+            #   with:
+            #       ruby-version: 3.0.5
 
-            - name: Setup Homebrew
-              run: |
-                  HOMEBREW_CACHE=$HOME/Homebrew-Cache
-                  mkdir -p $HOMEBREW_CACHE
-                  curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOMEBREW_CACHE
-                  export PATH=$HOMEBREW_CACHE/bin:$PATH
+            # - name: Setup Homebrew
+            #   run: |
+            #       HOMEBREW_CACHE=$HOME/Homebrew-Cache
+            #       mkdir -p $HOMEBREW_CACHE
+            #       curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOMEBREW_CACHE
+            #       export PATH=$HOMEBREW_CACHE/bin:$PATH
 
-            - name: Restore Homebrew Cache
-              uses: actions/cache@v2
-              with:
-                  path: |
-                      $HOME/Homebrew-Cache
-                  key: brew-${{ runner.os }}-${{ hashFiles('**/*.rb') }}
+            # - name: Restore Homebrew Cache
+            #   uses: actions/cache@v2
+            #   with:
+            #       path: |
+            #           $HOME/Homebrew-Cache
+            #       key: brew-${{ runner.os }}-${{ hashFiles('**/*.rb') }}
 
             # - name: Install Danger Swift
             #   run: |
@@ -43,20 +43,20 @@ jobs:
             #   env:
             #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Save Homebrew Cache
-              uses: actions/cache@v2
-              with:
-                  path: |
-                      $HOME/Homebrew-Cache
-                  key: brew-${{ runner.os }}-${{ hashFiles('**/*.rb') }}
+            # - name: Save Homebrew Cache
+            #   uses: actions/cache@v2
+            #   with:
+            #       path: |
+            #           $HOME/Homebrew-Cache
+            #       key: brew-${{ runner.os }}-${{ hashFiles('**/*.rb') }}
 
-            - name: Cache RubyGems
-              uses: actions/cache@v2
-              with:
-                  path: vendor/bundle
-                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-gems-
+            # - name: Cache RubyGems
+            #   uses: actions/cache@v2
+            #   with:
+            #       path: vendor/bundle
+            #       key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+            #       restore-keys: |
+            #           ${{ runner.os }}-gems-
 
             # - name: Run Danger
             #   run: danger-swift ci
@@ -70,5 +70,5 @@ jobs:
               env:
                   DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
 
-            - name: Delete old archives
-              run: find ~/Library/Developer/Xcode/Archives -ctime +7 -maxdepth 1 -print0 -exec rm -f -r {} \;
+            # - name: Delete old archives
+            #   run: find ~/Library/Developer/Xcode/Archives -ctime +7 -maxdepth 1 -print0 -exec rm -f -r {} \;
