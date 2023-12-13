@@ -1,0 +1,6 @@
+framework module Pods_DangerSwiftTest {
+  umbrella header "Pods-DangerSwiftTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

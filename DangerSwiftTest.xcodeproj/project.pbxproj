@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13658D8A77AA5CE5C229BAAD /* Pods_DangerSwiftTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7430D2B8B45503B10D2DEA6 /* Pods_DangerSwiftTestTests.framework */; };
+		275CCC450A3544DE270EE7B0 /* Pods_DangerSwiftTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA8AD1F690AA10487CD55C4 /* Pods_DangerSwiftTest.framework */; };
 		4C3B78BF2B29601500C5E7E5 /* DangerSwiftTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B78BE2B29601500C5E7E5 /* DangerSwiftTestApp.swift */; };
 		4C3B78C12B29601500C5E7E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B78C02B29601500C5E7E5 /* ContentView.swift */; };
 		4C3B78C32B29601600C5E7E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B78C22B29601600C5E7E5 /* Assets.xcassets */; };
@@ -14,6 +16,7 @@
 		4C3B78D02B29601700C5E7E5 /* DangerSwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B78CF2B29601700C5E7E5 /* DangerSwiftTestTests.swift */; };
 		4C3B78DA2B29601700C5E7E5 /* DangerSwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B78D92B29601700C5E7E5 /* DangerSwiftTestUITests.swift */; };
 		4C3B78DC2B29601700C5E7E5 /* DangerSwiftTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B78DB2B29601700C5E7E5 /* DangerSwiftTestUITestsLaunchTests.swift */; };
+		723ADECB9B079A3B54415BD5 /* Pods_DangerSwiftTest_DangerSwiftTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5635A6858046963A4441342 /* Pods_DangerSwiftTest_DangerSwiftTestUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EBCF0CCA9972FA82E2FE708 /* Pods-DangerSwiftTest-DangerSwiftTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTest-DangerSwiftTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTest-DangerSwiftTestUITests/Pods-DangerSwiftTest-DangerSwiftTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C3B78BB2B29601500C5E7E5 /* DangerSwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DangerSwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3B78BE2B29601500C5E7E5 /* DangerSwiftTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerSwiftTestApp.swift; sourceTree = "<group>"; };
 		4C3B78C02B29601500C5E7E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,14 @@
 		4C3B78D52B29601700C5E7E5 /* DangerSwiftTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DangerSwiftTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3B78D92B29601700C5E7E5 /* DangerSwiftTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerSwiftTestUITests.swift; sourceTree = "<group>"; };
 		4C3B78DB2B29601700C5E7E5 /* DangerSwiftTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerSwiftTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4DFB796866A28F003C7C5C9A /* Pods-DangerSwiftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTest.release.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTest/Pods-DangerSwiftTest.release.xcconfig"; sourceTree = "<group>"; };
+		7E6F84BEC27B0BC578E7815C /* Pods-DangerSwiftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTest.debug.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTest/Pods-DangerSwiftTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9CBD7130CE479D410B247D0C /* Pods-DangerSwiftTest-DangerSwiftTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTest-DangerSwiftTestUITests.release.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTest-DangerSwiftTestUITests/Pods-DangerSwiftTest-DangerSwiftTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B7430D2B8B45503B10D2DEA6 /* Pods_DangerSwiftTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DangerSwiftTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2660433AC68DBB00DD95564 /* Pods-DangerSwiftTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTestTests.release.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTestTests/Pods-DangerSwiftTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		EAA8AD1F690AA10487CD55C4 /* Pods_DangerSwiftTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DangerSwiftTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C98A852B14F5FBC8582289 /* Pods-DangerSwiftTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTestTests.debug.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTestTests/Pods-DangerSwiftTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5635A6858046963A4441342 /* Pods_DangerSwiftTest_DangerSwiftTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DangerSwiftTest_DangerSwiftTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275CCC450A3544DE270EE7B0 /* Pods_DangerSwiftTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13658D8A77AA5CE5C229BAAD /* Pods_DangerSwiftTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723ADECB9B079A3B54415BD5 /* Pods_DangerSwiftTest_DangerSwiftTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,8 @@
 				4C3B78CE2B29601700C5E7E5 /* DangerSwiftTestTests */,
 				4C3B78D82B29601700C5E7E5 /* DangerSwiftTestUITests */,
 				4C3B78BC2B29601500C5E7E5 /* Products */,
+				AFBEC4391772076DBE25D277 /* Pods */,
+				4FC2A9848B9F507F8CBCC715 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,29 @@
 			path = DangerSwiftTestUITests;
 			sourceTree = "<group>";
 		};
+		4FC2A9848B9F507F8CBCC715 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAA8AD1F690AA10487CD55C4 /* Pods_DangerSwiftTest.framework */,
+				F5635A6858046963A4441342 /* Pods_DangerSwiftTest_DangerSwiftTestUITests.framework */,
+				B7430D2B8B45503B10D2DEA6 /* Pods_DangerSwiftTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFBEC4391772076DBE25D277 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E6F84BEC27B0BC578E7815C /* Pods-DangerSwiftTest.debug.xcconfig */,
+				4DFB796866A28F003C7C5C9A /* Pods-DangerSwiftTest.release.xcconfig */,
+				2EBCF0CCA9972FA82E2FE708 /* Pods-DangerSwiftTest-DangerSwiftTestUITests.debug.xcconfig */,
+				9CBD7130CE479D410B247D0C /* Pods-DangerSwiftTest-DangerSwiftTestUITests.release.xcconfig */,
+				F4C98A852B14F5FBC8582289 /* Pods-DangerSwiftTestTests.debug.xcconfig */,
+				E2660433AC68DBB00DD95564 /* Pods-DangerSwiftTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +174,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C3B78DF2B29601700C5E7E5 /* Build configuration list for PBXNativeTarget "DangerSwiftTest" */;
 			buildPhases = (
+				760A592B8A35485C960FB3A6 /* [CP] Check Pods Manifest.lock */,
 				4C3B78B72B29601500C5E7E5 /* Sources */,
 				4C3B78B82B29601500C5E7E5 /* Frameworks */,
 				4C3B78B92B29601500C5E7E5 /* Resources */,
@@ -151,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C3B78E22B29601700C5E7E5 /* Build configuration list for PBXNativeTarget "DangerSwiftTestTests" */;
 			buildPhases = (
+				A841A2B4D127D1DC686332E4 /* [CP] Check Pods Manifest.lock */,
 				4C3B78C72B29601700C5E7E5 /* Sources */,
 				4C3B78C82B29601700C5E7E5 /* Frameworks */,
 				4C3B78C92B29601700C5E7E5 /* Resources */,
@@ -169,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C3B78E52B29601700C5E7E5 /* Build configuration list for PBXNativeTarget "DangerSwiftTestUITests" */;
 			buildPhases = (
+				C793E451875F3778BE025F6C /* [CP] Check Pods Manifest.lock */,
 				4C3B78D12B29601700C5E7E5 /* Sources */,
 				4C3B78D22B29601700C5E7E5 /* Frameworks */,
 				4C3B78D32B29601700C5E7E5 /* Resources */,
@@ -251,6 +294,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		760A592B8A35485C960FB3A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DangerSwiftTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A841A2B4D127D1DC686332E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DangerSwiftTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C793E451875F3778BE025F6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DangerSwiftTest-DangerSwiftTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C3B78B72B29601500C5E7E5 /* Sources */ = {
@@ -411,6 +523,7 @@
 		};
 		4C3B78E02B29601700C5E7E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E6F84BEC27B0BC578E7815C /* Pods-DangerSwiftTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -432,6 +545,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinhnx.ct.iosapp.DangerSwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,6 +556,7 @@
 		};
 		4C3B78E12B29601700C5E7E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DFB796866A28F003C7C5C9A /* Pods-DangerSwiftTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +578,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinhnx.ct.iosapp.DangerSwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,6 +589,7 @@
 		};
 		4C3B78E32B29601700C5E7E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4C98A852B14F5FBC8582289 /* Pods-DangerSwiftTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +601,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinhnx.ct.iosapp.DangerSwiftTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,6 +613,7 @@
 		};
 		4C3B78E42B29601700C5E7E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2660433AC68DBB00DD95564 /* Pods-DangerSwiftTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -500,6 +625,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinhnx.ct.iosapp.DangerSwiftTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -509,6 +637,7 @@
 		};
 		4C3B78E62B29601700C5E7E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EBCF0CCA9972FA82E2FE708 /* Pods-DangerSwiftTest-DangerSwiftTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -518,6 +647,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinhnx.ct.iosapp.DangerSwiftTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,6 +659,7 @@
 		};
 		4C3B78E72B29601700C5E7E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CBD7130CE479D410B247D0C /* Pods-DangerSwiftTest-DangerSwiftTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +669,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinhnx.ct.iosapp.DangerSwiftTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
