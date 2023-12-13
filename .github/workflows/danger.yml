@@ -24,8 +24,16 @@ jobs:
             # - name: Install danger-js
             #   run: brew install danger/tap/danger-js
 
-            # - name: Install danger-swift
-            #   run: brew install danger/tap/danger-swift
+            # - name: Install Danger
+            #   run: |
+            #       brew install danger/tap/danger-js
+            #   env:
+            #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Danger
+              uses: 417-72KI/danger-swiftlint@v5.9 # Look at the `Note for version`
+              env:
+                  DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
 
             - name: Cache RubyGems
               uses: actions/cache@v2
@@ -35,19 +43,13 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-gems-
 
-            - name: Bundle install
-              run: |
-                  gem install bundler
-                  bundle config path vendor/bundle
-                  bundle install --jobs 4 --retry 3
+            # - name: Bundle install
+            #   run: |
+            #       gem install bundler
+            #       bundle config path vendor/bundle
+            #       bundle install --jobs 4 --retry 3
 
-            # - name: Run Danger
-            #   run: danger-swift ci
-            #   env:
-            #       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
-
-            - name: Run danger
-              run: |
-                  bundle exec danger
+            - name: Run Danger
+              run: danger-swift ci
               env:
-                  DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}

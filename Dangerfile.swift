@@ -21,6 +21,13 @@ let filesToLint = (danger.git.modifiedFiles + danger.git.createdFiles).filter { 
 
 SwiftLint.lint(.files(filesToLint), inline: true)
 
+// SwiftLint.lint(inline: true, swiftlintPath: "Pods/SwiftLint/swiftlint")
+
+// Coverage.xcodeBuildCoverage(
+//     .derivedDataFolder("Build"),
+//     minimumCoverage: 50
+)
+
 // Support running via `danger local`
 if danger.github != nil {
     // These checks only happen on a PR
