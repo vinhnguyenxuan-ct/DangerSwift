@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct DangerSwiftTestApp: App {
+    
+    // [!] Test Danger+SwiftLint
+    let foo: String!
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
