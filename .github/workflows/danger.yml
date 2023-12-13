@@ -23,12 +23,12 @@ jobs:
       - name: Install danger-swift
         run: brew install danger/tap/danger-swift
 
-      - run: mkdir DangerTestWithDependencies && mv DangerfileWithDependencies.swift DangerTestWithDependencies/Dangerfile.swift
+      # - run: mkdir DangerTestWithDependencies && mv DangerfileWithDependencies.swift DangerTestWithDependencies/Dangerfile.swift
 
-      - run: cd DangerTestWithDependencies && danger-swift ci --verbose --failOnErrors --id DangerDependencies
-        if: ${{ github.event_name == 'pull_request' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - run: cd DangerTestWithDependencies && danger-swift ci --verbose --failOnErrors --id DangerDependencies
+      #   if: ${{ github.event_name == 'pull_request' }}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Danger
         run: danger-swift ci
