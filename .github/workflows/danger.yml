@@ -9,13 +9,18 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
               with:
                   fetch-depth: 0
 
+            # - name: Danger
+            #   uses: danger/swift@3.18.0
+            #   with:
+            #       args: --failOnErrors --no-publish-check
+            #   env:
+            #       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+
             - name: Danger
-              uses: danger/swift@3.18.0
-              with:
-                  args: --failOnErrors --no-publish-check
+              uses: 417-72KI/danger-swiftlint@v5.9 # Look at the `Note for version`
               env:
                   DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
