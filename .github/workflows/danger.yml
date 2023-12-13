@@ -2,6 +2,7 @@ name: CI
 
 on:
     pull_request:
+        types: [opened, reopened, edited, synchronize]
         paths:
             - ".github/workflows/swiftlint.yml"
             - ".swiftlint.yml"
@@ -18,7 +19,7 @@ jobs:
             - name: Set up Ruby
               uses: ruby/setup-ruby@v1
               with:
-                  ruby-version: 3.0.5
+                  ruby-version: "2.6"
 
             # - name: Install danger-js
             #   run: brew install danger/tap/danger-js
@@ -36,9 +37,17 @@ jobs:
 
             - name: Bundle install
               run: |
+                  gem install bundler
                   bundle config path vendor/bundle
                   bundle install --jobs 4 --retry 3
-            - name: Run Danger
-              run: danger-swift ci
+
+            # - name: Run Danger
+            #   run: danger-swift ci
+            #   env:
+            #       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+
+            - name: Run danger
+              run: |
+                  bundle exec danger
               env:
-                  DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+                  DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
