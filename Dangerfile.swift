@@ -1,5 +1,6 @@
 import Danger
 import Foundation
+import DangerSwiftLint 
 
 let danger = Danger()
 
@@ -18,7 +19,6 @@ if !swiftFilesWithCopyright.isEmpty {
 }
 
 let filesToLint = (danger.git.modifiedFiles + danger.git.createdFiles).filter { !$0.contains("Documentation/") }
-
 SwiftLint.lint(.files(filesToLint), inline: true)
 
 // Support running via `danger local`
