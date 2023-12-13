@@ -1,23 +1,26 @@
 name: CI
 
 on:
-  pull_request:
+    pull_request:
+        types: [opened, reopened, edited, synchronize]
 
 jobs:
-  build:
-    runs-on: macos-latest
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
+            # - name: Danger
+            #   uses: danger/swift@3.18.0
+            #   with:
+            #       args: --failOnErrors --no-publish-check
+            #   env:
+            #       DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
 
-      - name: Install danger-js
-        run: brew install danger/tap/danger-js
-
-      - name: Install danger-swift
-        run: brew install danger/tap/danger-swift
-
-      - name: Danger
-        run: danger-swift ci
-        env:
-          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+            - name: Danger
+              uses: 417-72KI/danger-swiftlint@v5.9 # Look at the `Note for version`
+              env:
+                  DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
