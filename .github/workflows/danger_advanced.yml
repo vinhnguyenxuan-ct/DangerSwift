@@ -8,13 +8,13 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-    test-on-macos-12:
-        name: Test on macOS 12
-        runs-on: macOS-12
+    run_danger:
+        name: Test on macOS
+        runs-on: macOS-13
         strategy:
             fail-fast: false
             matrix:
-                xcode: ["14.1"]
+                xcode: ["14.3.1"]
         steps:
             - uses: actions/checkout@v2
 
