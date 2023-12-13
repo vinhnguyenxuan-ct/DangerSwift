@@ -3,19 +3,17 @@ name: CI
 on:
     pull_request:
 
+concurrency:
+    group: ${{ github.ref }}-${{ github.workflow }}
+    cancel-in-progress: true
+
 jobs:
     build:
         runs-on: macos-latest
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            - name: Set up Xcode
-              uses: xcode/setup-xcode@v2
-              with:
-                  xcode-version: "13.0" # Specify the Xcode version you want to use
-                  tools-version: "latest" # Use the latest version of Xcode tools
+            - name: Checkout
+              uses: actions/checkout@master
 
             - name: Install danger-js
               run: brew install danger/tap/danger-js
