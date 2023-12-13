@@ -1,5 +1,5 @@
 import Danger
-import Foundation
+// import Foundation
 
 let danger = Danger()
 
@@ -20,13 +20,6 @@ if !swiftFilesWithCopyright.isEmpty {
 // let filesToLint = (danger.git.modifiedFiles + danger.git.createdFiles).filter { !$0.contains("Documentation/") }
 
 // SwiftLint.lint(.files(filesToLint), inline: true)
-
-// SwiftLint.lint(inline: true, swiftlintPath: "Pods/SwiftLint/swiftlint")
-
-// Coverage.xcodeBuildCoverage(
-//     .derivedDataFolder("Build"),
-//     minimumCoverage: 50
-)
 
 // Support running via `danger local`
 if danger.github != nil {
