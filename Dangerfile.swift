@@ -3,6 +3,8 @@ import Foundation
 
 let danger = Danger()
 
+let editedFiles = danger.git.modifiedFiles + danger.git.createdFiles
+message("These files have changed: \(editedFiles.joined(separator: ", "))")
 
 if danger.git.createdFiles.count + danger.git.modifiedFiles.count - danger.git.deletedFiles.count > 300 {
     warn("Big PR, try to keep changes smaller if you can")
