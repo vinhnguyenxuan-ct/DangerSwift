@@ -14,10 +14,24 @@ warn("Big PR") if git.lines_of_code > 500
 # Ensure there is a summary for a PR
 fail("Please provide a summary in the Pull Request description") if summary_is_missing
 
+# Ensure there is a JIRA URL for a PR
+if has_modified_source && !(declared_non_feature || has_story)
+  warn("Please provide a JIRA URL if the PR is not for refactoring", sticky: true)
+end
+
 # Ensure CHANGELOG is not touched
 if git.modified_files.include?("CHANGELOG.md") && github.pr_author != "tflhyl"
   fail("DO NOT update CHANGELOG.md manually, write CHANGES in PR description instead", sticky: true)
 end
+
+# Run swiftlint
+%x(echo "reporter: json" >> .swiftlint.yml)
+
+pwd = %x(pwd).strip + "/"
+linter_json = %x(#{pwd}Pods/SwiftLint/swiftlint)
+results = JSON.parse linter_json
+
+%x(git checkout .swiftlint.yml)
 
 results.each do |violation|
   file = violation["file"].gsub(pwd, "")

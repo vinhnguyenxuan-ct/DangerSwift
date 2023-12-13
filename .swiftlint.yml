@@ -1,0 +1,81 @@
+whitelist_rules:
+  - closure_spacing
+  - colon
+  - empty_enum_arguments
+  - fatal_error_message
+  - force_cast
+  - force_try
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - legacy_cggeometry_functions
+  - legacy_constant
+  - legacy_constructor
+  - legacy_nsgeometry_functions
+  - operator_usage_whitespace
+  - redundant_string_enum_value
+  - redundant_void_return
+  - return_arrow_whitespace
+  - type_name
+  - unused_closure_parameter
+  - unused_optional_binding
+  - vertical_whitespace
+  - void_return
+  - custom_rules
+  - explicit_init
+  - weak_delegate
+function_parameter_count:
+  warning: 10
+  error: 15
+function_body_length:
+  warning: 120
+  error: 200
+identifier_name:
+  min_length:
+    warning: 0
+    error: 0
+  max_length:
+    warning: 60
+    error: 80
+  excluded:
+    - me
+    - on
+    - id
+    - ID
+    - km
+    - mi
+    - ad
+    - vm
+    - vc
+    - ok
+type_name:
+  max_length: 42
+type_body_length:
+  warning: 400
+file_length:
+  warning: 800
+  error: 1200
+large_tuple:
+  warning: 4
+  error: 6
+excluded:
+  - Carthage
+  - Pods
+  - fastlane
+  - scripts
+  - Liquore/Liquore/Proto
+  - Liquore/Tests
+  - CarousellTests
+custom_rules:
+  whitespace_after_slash_comment:
+    name: 'Whitespace After Slash Comment'
+    message: 'Single-line comment should have space after slash'
+    match_kinds:
+      - comment
+    severity: warning
+    regex: "\ *(\/\/\\S)"
+  dark_mode_compatible_background_color:
+    included: ".*.swift"
+    name: "Dark Mode Compatible Background Color"
+    message: "Unless intended .white color is not dark mode compatible. Consider using crs_bgColor or crs_secondaryBgColor instead"
+    severity: warning
+    regex: "(backgroundColor = .white)"
