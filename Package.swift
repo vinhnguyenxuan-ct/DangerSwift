@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "DangerSwiftTest",
     dependencies: [
-      .package(url: "https://github.com/danger/swift.git", from: "1.0.0")
+      .package(url: "https://github.com/danger/swift.git", from: "2.0.6")
     ],
     targets: [
         // This is just an arbitrary Swift file in our app, that has
