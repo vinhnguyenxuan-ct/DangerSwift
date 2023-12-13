@@ -2,7 +2,10 @@ name: CI
 
 on:
     pull_request:
-
+        paths:
+            - ".github/workflows/swiftlint.yml"
+            - ".swiftlint.yml"
+            - "**/*.swift"
 jobs:
     build:
         runs-on: macos-latest
@@ -30,12 +33,7 @@ jobs:
                   key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-gems-
-            - name: Install SwiftLint
-              run: |
-                  curl -OL "https://github.com/realm/SwiftLint/releases/download/0.43.1/swiftlint_linux.zip"
-                  unzip swiftlint_linux.zip
-                  chmod +x swiftlint
-                  sudo mv swiftlint /usr/local/bin/
+
             - name: Bundle install
               run: |
                   bundle config path vendor/bundle
