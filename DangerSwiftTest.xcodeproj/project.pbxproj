@@ -16,6 +16,7 @@
 		4C3B78D02B29601700C5E7E5 /* DangerSwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B78CF2B29601700C5E7E5 /* DangerSwiftTestTests.swift */; };
 		4C3B78DA2B29601700C5E7E5 /* DangerSwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B78D92B29601700C5E7E5 /* DangerSwiftTestUITests.swift */; };
 		4C3B78DC2B29601700C5E7E5 /* DangerSwiftTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B78DB2B29601700C5E7E5 /* DangerSwiftTestUITestsLaunchTests.swift */; };
+		4C5AE2D12B33DFE3000C1618 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AE2D02B33DFE3000C1618 /* TestFile.swift */; };
 		723ADECB9B079A3B54415BD5 /* Pods_DangerSwiftTest_DangerSwiftTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5635A6858046963A4441342 /* Pods_DangerSwiftTest_DangerSwiftTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		4C3B78D52B29601700C5E7E5 /* DangerSwiftTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DangerSwiftTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3B78D92B29601700C5E7E5 /* DangerSwiftTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerSwiftTestUITests.swift; sourceTree = "<group>"; };
 		4C3B78DB2B29601700C5E7E5 /* DangerSwiftTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerSwiftTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C5AE2D02B33DFE3000C1618 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		4DFB796866A28F003C7C5C9A /* Pods-DangerSwiftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTest.release.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTest/Pods-DangerSwiftTest.release.xcconfig"; sourceTree = "<group>"; };
 		7E6F84BEC27B0BC578E7815C /* Pods-DangerSwiftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTest.debug.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTest/Pods-DangerSwiftTest.debug.xcconfig"; sourceTree = "<group>"; };
 		9CBD7130CE479D410B247D0C /* Pods-DangerSwiftTest-DangerSwiftTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangerSwiftTest-DangerSwiftTestUITests.release.xcconfig"; path = "Target Support Files/Pods-DangerSwiftTest-DangerSwiftTestUITests/Pods-DangerSwiftTest-DangerSwiftTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				4C3B78C02B29601500C5E7E5 /* ContentView.swift */,
 				4C3B78C22B29601600C5E7E5 /* Assets.xcassets */,
 				4C3B78C42B29601600C5E7E5 /* Preview Content */,
+				4C5AE2D02B33DFE3000C1618 /* TestFile.swift */,
 			);
 			path = DangerSwiftTest;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C5AE2D12B33DFE3000C1618 /* TestFile.swift in Sources */,
 				4C3B78C12B29601500C5E7E5 /* ContentView.swift in Sources */,
 				4C3B78BF2B29601500C5E7E5 /* DangerSwiftTestApp.swift in Sources */,
 			);
