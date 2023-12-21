@@ -33,8 +33,8 @@ if danger.github != nil {
     }
 }
 
-let hasAppChanges = !git.modifiedFiles.filter { $0.contains("DangerSwiftTest/") }.isEmpty
-let hasTestChanges = !git.modifiedFiles.filter { $0.contains("DangerSwiftTestTets/") }.isEmpty
+let hasAppChanges = !danger.git.modifiedFiles.filter { $0.contains("DangerSwiftTest/") }.isEmpty
+let hasTestChanges = !danger.git.modifiedFiles.filter { $0.contains("DangerSwiftTestTets/") }.isEmpty
 
 // * If files changes, tests need to be updated too
 if hasAppChanges && !hasTestChanges {
