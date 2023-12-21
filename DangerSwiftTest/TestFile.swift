@@ -8,10 +8,11 @@
 import Foundation
 
 struct TestValue {
-    var foo: String!
+    var myVariable: String?
     
     func doSomething() {
-        let url = URL(string: foo)!
-        print(url)
+        if let url = URL(string: myVariable ?? "") {
+            print(url)
+        }
     }
 }

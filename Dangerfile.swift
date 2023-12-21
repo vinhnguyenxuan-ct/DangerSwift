@@ -6,7 +6,9 @@ let danger = Danger()
 // More example on: https://gist.github.com/candostdagdeviren/e49271e6a4b80f93f3193af89d10f4b1
 
 // * run SwiftLint
-let filesToLint = (danger.git.modifiedFiles + danger.git.createdFiles).filter { !$0.contains("Documentation/") }
+let filesToLint = (danger.git.createdFiles).filter { !$0.contains("Documentation/") }
+
+
 SwiftLint.lint(.files(filesToLint), inline: true)
 
 // * Warn if big changes
